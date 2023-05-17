@@ -1,8 +1,8 @@
 //VM1
 resource "azurerm_linux_virtual_machine" "vm1" {
   name                = "virtual-machine-1"
-  resource_group_name = "${var.rgname}"
-  location            = "${var.location}"
+  resource_group_name = var.rgname
+  location            = var.location
   size                = "Standard_DS1_v2"
   admin_username      = "adminuser"
   network_interface_ids = [
@@ -35,8 +35,8 @@ resource "azurerm_linux_virtual_machine" "vm1" {
 //VM2
 resource "azurerm_linux_virtual_machine" "vm2" {
   name                = "virtual-machine-2"
-  resource_group_name = "${var.rgname}"
-  location            = "${var.location}"
+  resource_group_name = var.rgname
+  location            = var.location
   size                = "Standard_DS1_v2"
   admin_username      = "adminuser"
   network_interface_ids = [
